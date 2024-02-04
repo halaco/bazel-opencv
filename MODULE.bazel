@@ -1,1 +1,9 @@
-module(name="module_name", version="0.0.0")
+module(name="bazel_opencv", version="0.0.0")
+
+bazel_dep(name = "rules_cc", version = "0.0.9")
+bazel_dep(name = "rules_foreign_cc", version = "0.10.1")
+
+bazel_dep(name = "googletest", version = "1.14.0")
+
+opencv_repository = use_extension("//third_party/opencv:extensions.bzl", "opencv_repository")
+use_repo(opencv_repository, "org_opencv")

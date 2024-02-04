@@ -1,0 +1,15 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
+
+cc_test(
+    name = "opencv_test",
+    srcs = [
+        "opencv_test.cpp",
+    ],
+    deps = [
+        "@googletest//:gtest_main",
+        "//third_party/opencv",
+    ],
+    data = [
+        "//test/data:sample_images",
+    ],
+)

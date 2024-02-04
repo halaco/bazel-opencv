@@ -1,0 +1,11 @@
+filegroup(
+    name = "sample_images",
+    srcs = [
+        "sample_640×426.jpeg",
+        "sample_640×426.png",
+    ],
+    visibility = [
+        "//third_party/opencv:__subpackages__",
+        "//test:__subpackages__",
+    ],
+)
