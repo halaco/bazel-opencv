@@ -1,0 +1,12 @@
+cc_library(
+    name = "core",
+    srcs = [
+        "@org_opencv//:core_srcs"
+    ],
+    hdrs = [
+        "@org_opencv//:core_hdrs",
+    ],
+    deps = [
+        "//include/opencv2:opencv_headers"
+    ],
+)

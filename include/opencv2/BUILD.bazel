@@ -1,0 +1,14 @@
+load(":gen_headers.bzl", "gen_headers")
+
+gen_headers(
+    name = "opencv_modules_hpp",
+)
+
+cc_library(
+    name = "opencv_headers",
+    hdrs = [
+        ":opencv_modules_hpp",
+    ],
+    strip_include_prefix = "//include",
+    visibility = ["//visibility:public"],
+)

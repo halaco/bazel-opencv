@@ -1158,14 +1158,14 @@
       }
     },
     "//third_party/opencv:extensions.bzl%opencv_repository": {
-      "bzlTransitiveDigest": "Sf8g9Zzv/UIVJR0qjsP7BUTWQLOiXTuNwqnsiIuZSUI=",
+      "bzlTransitiveDigest": "ih2yTXRhRs8KoRsy1FaxbHrUWEkMFQUt3eLCgENal7c=",
       "accumulatedFileDigests": {},
       "envVariables": {},
       "generatedRepoSpecs": {
         "org_opencv": {
           "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
           "ruleClassName": "http_archive",
-          "attributes": {"name":"--_main~opencv_repository~org_opencv","url":"--https://github.com/opencv/opencv/archive/refs/tags/4.8.1.tar.gz","build_file_content":"--filegroup(name = \"all\", srcs = glob([\"**\"]), visibility = [\"//visibility:public\"])","strip_prefix":"--opencv-4.8.1","sha256":"--62f650467a60a38794d681ae7e66e3e8cfba38f445e0bf87867e2f2cdc8be9d5"}
+          "attributes": {"name":"--_main~opencv_repository~org_opencv","url":"--https://github.com/opencv/opencv/archive/refs/tags/4.8.1.tar.gz","build_file_content":"--\n\nexports_files(glob([\"cmake/templates/*.in\"]))\n\nfilegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"core_srcs\",\n    srcs = glob([\"modules/core/src/**\"]),\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"core_hdrs\",\n    srcs = glob([\"modules/core/include/**\"]),\n    visibility = [\"//visibility:public\"],\n)\n\n","strip_prefix":"--opencv-4.8.1","sha256":"--62f650467a60a38794d681ae7e66e3e8cfba38f445e0bf87867e2f2cdc8be9d5"}
         }
       }
     }
